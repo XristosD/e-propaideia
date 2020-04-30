@@ -1,4 +1,4 @@
-@extends('supervisors.layout')
+@extends('supervisor.layout')
   
 @section('content')
 
@@ -11,7 +11,7 @@
             <div class="col-1">
                 <a href="#">
                     <button type="button" class="btn btn-primary btn-lg rounded-circle" data-toggle="tooltip" data-placement="top" title="Νέος Μαθητής">
-                        <span>&#43;</span>
+                        <span><strong>&#43;</strong></span>
                     </button>
                 </a>
             </div>

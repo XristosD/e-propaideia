@@ -1,4 +1,4 @@
-  @extends('supervisors.layout')
+  @extends('supervisor.layout')
   
   @section('content')
   <div class="container">
@@ -20,7 +20,7 @@
                   <div class="card h-100">
                       <div class="card-body">
                         <h5 class="card-title">1. Εγγραφή</h5>
-                        <p class="card-text"><a href="#">Δημιουργείστε</a> προσωπικό λογαριασμό. Εάν έχετε είδη εγγραφεί <a href="#">συνδεθείτε</a> με τον στοιχεία σας.</p>
+                        <p class="card-text"><a href="/supervisor/register">Δημιουργείστε</a> προσωπικό λογαριασμό. Εάν έχετε είδη εγγραφεί <a href="/supervisor/login">συνδεθείτε</a> με τον στοιχεία σας.</p>
                       </div>
                   </div>
               </div>
