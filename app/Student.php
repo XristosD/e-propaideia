@@ -5,17 +5,17 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Supervisor extends Authenticatable
+class Student extends Authenticatable
 {
     use Notifiable;
 
-    /**
+        /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'password', 'supervisor_id',
     ];
 
     /**
@@ -27,8 +27,8 @@ class Supervisor extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function students()
+    public function supervisor()
     {
-        return $this->hasMany(Student::class);
+        return $this->belongsTo(Supervisor::class);
     }
 }

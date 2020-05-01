@@ -30,4 +30,12 @@ Route::prefix('/supervisor')->name('supervisor.')->namespace('Supervisor')->grou
 
     Route::get('/welcome','WelcomeController@index')->name('welcome');
     Route::get('/mainpanel','MainpanelController@index')->name('mainpanel');
+    Route::get('/studentpanel/{student_id}', 'StudentpanelController@index');
+});
+
+Route::prefix('/student')->name('student.')->namespace('Student')->group(function(){
+    Route::namespace('Auth')->group(function(){
+        Route::get('/register','RegisterController@showRegistrationForm')->name('register');
+        Route::post('/register','RegisterController@register');
+    });
 });

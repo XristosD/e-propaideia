@@ -50,7 +50,12 @@ return [
         'supervisor' => [
             'driver' => 'session',
             'provider' => 'supervisors'
-        ]
+        ],
+
+        'student' => [
+            'diver' => 'session',
+            'provider' => 'students',
+        ],
     ],
 
     /*
@@ -79,7 +84,12 @@ return [
         'supervisors' => [
             'driver'=> 'eloquent',
             'model' => App\Supervisor::class,
-        ]
+        ],
+
+        'studets' => [
+            'driver' => 'eloquent',
+            'model' => App\Student::class,
+        ],
 
         // 'users' => [
         //     'driver' => 'database',

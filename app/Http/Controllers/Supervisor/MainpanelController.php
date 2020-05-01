@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Supervisor;
 
+use Auth;
+use App\Supervisor;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -13,6 +15,9 @@ class MainpanelController extends Controller
     }
 
     public function index(){
-        return view('supervisor.mainpanel');
+
+        $students = Auth::guard('supervisor')->user()->students;
+
+        return view('supervisor.mainpanel', ['students' => $students]);
     }
 }
