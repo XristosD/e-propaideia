@@ -43,7 +43,9 @@
       </div>
 
       <div class="d-flex justify-content-center my-3">
-        <button type="button" class="btn btn-primary btn-lg w-50 btn-block">Block level button</button>
+        <a href="student/welcome">
+          <button type="button" class="btn btn-primary btn-lg ">Είμαι Μαθητής</button>
+        </a>
       </div>
 
       <div class="d-flex justify-content-center">
@@ -57,7 +59,7 @@
             <div class="carousel-item active">
               <div class="d-flex justify-content-center">
                 <div class="col-md-8 mt-4 align-middle">
-                  <h1 class="">Κλιμακούμενη διδακσαλία ανάλογη της προόδου του μαθητή</h1>
+                  <h1 class="">Κλιμακωτή διδασκαλία ανάλογη της προόδου του μαθητή</h1>
                 </div>  
               </div>                
             </div>

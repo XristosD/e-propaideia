@@ -21,7 +21,7 @@ class Authenticate extends Middleware
                 return route('supervisor.login');
             }
             else{
-                return route('welcome');
+                return route('supervisor.welcome');
             }
 
             
