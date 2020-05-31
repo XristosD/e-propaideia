@@ -7,9 +7,8 @@
               <p>Καλως ήρθατε στην </p>
               <h1>e-propaideia</h1>
               <p>
-                  Στόχος της ιστοσελίδας Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Corrupti voluptates facere fugit. Ipsum deleniti vel itaque, veritatis fuga dolorum, hic ratione exercitationem eligendi iste perferendis
-                  quo facilis voluptatem accusamus. Aut?
+                  Στόχος της ιστοσελίδας μας είναι να βοηθήσει τους γονείς αλλά και όσους θέλουν διδάξουν την προπαίδεια στα παιδία με απλό και ευχάριστο τρόπο. 
+                  Η διαδικασία για να ξεκινήσεις είναι πολλή απλή απλά ακολούθησε τα τρία βήματα που περιγράφονται παρακάτω.
               </p>
           </div>
       </div>
@@ -20,7 +19,7 @@
                   <div class="card h-100">
                       <div class="card-body">
                         <h5 class="card-title">1. Εγγραφή</h5>
-                        <p class="card-text"><a href="/supervisor/register">Δημιουργείστε</a> προσωπικό λογαριασμό. Εάν έχετε είδη εγγραφεί <a href="/supervisor/login">συνδεθείτε</a> με τον στοιχεία σας.</p>
+                        <p class="card-text"><a href="/supervisor/register">Δημιουργείστε</a> προσωπικό λογαριασμό. Εάν έχετε είδη εγγραφεί <a href="/supervisor/login">συνδεθείτε</a> με τα στοιχεία σας.</p>
                       </div>
                   </div>
               </div>
@@ -57,28 +56,22 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="d-flex justify-content-center">
-                <div class="col-md-8 mt-4">
-                  <span>
-                    
-                  </span>
+                <div class="col-md-8 mt-4 align-middle">
+                  <h1 class="">Κλιμακούμενη διδακσαλία ανάλογη της προόδου του μαθητή</h1>
                 </div>  
               </div>                
             </div>
             <div class="carousel-item">
               <div class="d-flex justify-content-center">
-                <div class="col-md-8 mt-4">
-                  <span>
-
-                  </span>
+                <div class="col-md-8 mt-4 text-center align-middle">
+                  <h1 class="">Διαδραστικός τρόπος εκμάθησης<br> με παραδέιγμάτα </h1>
                 </div>  
               </div>                
             </div>     
             <div class="carousel-item">
               <div class="d-flex justify-content-center">
-                <div class="col-md-8 mt-4">
-                  <span>
-
-                  </span>
+                <div class="col-md-8 mt-4 text-right align-middle">
+                  <h1 class="">Εύκολη αυτοαξιολόγηση <br>με διάφορων τύπων ασκήσεις</h1>
                 </div>  
               </div>                
             </div>                 

@@ -44,7 +44,7 @@ class RegisterController extends Controller
     {
                //validation rules.
                $rules = [
-                'name' => 'required|max:255|min:3',
+                'name' => 'required|max:255|min:3|unique:students',
                 'password' => 'required|integer|max:9999|min:1111',
                 'password-confirmed' => 'required|same:password',
             ];
@@ -53,10 +53,10 @@ class RegisterController extends Controller
                 'name.required' => 'Το πεδίο όνομα είναι απαραίτητο',
                 'name.max' => 'Το όνομα είναι πολύ μεγάλο',
                 'name.min' => 'Το όνομα πρέπει να έχει τουλάχιστον 3 χαρακτήρες',
-                'password.required' => 'Το πεδίο κωδικός πρόσαβασης είναι απαραίτητο',
-                'password.max' => 'Ο κωδικός θα πρέπει να αποτελείτε από 4 ψηφία 0-9',
-                'password.min' => 'Ο κωδικός θα πρέπει να αποτελείτε από 4 ψηφία 0-9',
-                'password.integer' => 'Ο κωδικός θα πρέπει να αποτελείτε από 4 ψηφία 0-9',
+                'password.required' => 'Το πεδίο κωδικός εισόδου είναι απαραίτητο',
+                'password.max' => 'Ο κωδικός θα πρέπει να αποτελείτε από 4 ψηφία 1-9',
+                'password.min' => 'Ο κωδικός θα πρέπει να αποτελείτε από 4 ψηφία 1-9',
+                'password.integer' => 'Ο κωδικός θα πρέπει να αποτελείτε από 4 ψηφία 1-9',
                 'password-confirmed.required' => 'Το πεδίο επιβαιβαιώση κωδικού είναι απαραίτητο',
                 'password-confirmed.same' => 'Οι κωδικοί δεν ταιριάζουν',
             ];

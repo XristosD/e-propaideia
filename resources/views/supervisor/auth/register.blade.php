@@ -5,7 +5,7 @@
 <div class="container">
     <div class="d-flex justify-content-center">
         <div class="p-5 border rounded-lg mt-5 text-center w-50" style="background-color:#c0f2f2;">
-            <form method="POST"  class="/supervisor/register">
+            <form method="POST"  action="/supervisor/register">
                 @csrf
                 <h3 class="mb-3">Στοιχεία Εγγραφής</h2>
                 <div class="form-group">

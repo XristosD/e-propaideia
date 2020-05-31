@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Supervisor\Auth;
+namespace App\Http\Controllers\Student\Auth;
 
 use Auth;
 use App\Http\Controllers\Controller;
@@ -10,22 +10,24 @@ class LoginController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('guest:supervisor')->except('logout');
-    }
-
-    public function showLoginForm()
-    {
-        return view('supervisor.auth.login');
+        $this->middleware('guest:student')->except('logout');
     }
 
     public function login(Request $request)
     {   
+        //dd($request);
         $this->validator($request);
+        //dd($request);
         
-        if(Auth::guard('supervisor')->attempt($request->only('email','password'))){
+        if(Auth::guard('student')->attempt($request->only('name','password'))){
             //Authentication passed...
-            return redirect()
-                ->route('supervisor.mainpanel');
+            if(Auth::guard('student')->user()->activated){
+                return redirect()->route('student.mainpanel');
+            }
+            else{
+                return redirect()->route('student.profile');
+            }
+            
         }
 
         //Authentication failed...
@@ -34,9 +36,8 @@ class LoginController extends Controller
 
     public function logout()
     {
-        Auth::guard('supervisor')->logout();
-        return redirect()
-            ->route('supervisor.welcome');
+        Auth::guard('student')->logout();
+        return redirect('/');
     }
 
     private function loginFailed()
@@ -51,7 +52,7 @@ class LoginController extends Controller
     {
         //validation rules.
         $rules = [
-            'email'    => 'required|email|exists:supervisors',
+            'name'    => 'required|exists:students',
             'password' => 'required|string|max:255',
         ];
            

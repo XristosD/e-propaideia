@@ -53,7 +53,7 @@ return [
         ],
 
         'student' => [
-            'diver' => 'session',
+            'driver' => 'session',
             'provider' => 'students',
         ],
     ],
@@ -86,7 +86,7 @@ return [
             'model' => App\Supervisor::class,
         ],
 
-        'studets' => [
+        'students' => [
             'driver' => 'eloquent',
             'model' => App\Student::class,
         ],
@@ -122,6 +122,13 @@ return [
 
         'supervisors' => [
             'provider' => 'supervisors',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'students' => [
+            'provider' => 'students',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

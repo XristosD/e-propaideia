@@ -18,7 +18,7 @@
                 @enderror
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control form-control-lg rounded-pill border" id="password" name="password" placeholder="4-ψήφιος κωδικός πρόσβασης">
+                    <input type="password" class="form-control form-control-lg rounded-pill border" id="password" name="password" placeholder="4-ψήφιος κωδικός εισόδου">
                 
                     @error('password')
                     <span class="text-danger">
@@ -27,7 +27,7 @@
                     @enderror
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control form-control-lg rounded-pill border" id="password-confirmed" name="password-confirmed" placeholder="Επιβαιβαίωση Κωδικού">
+                    <input type="password" class="form-control form-control-lg rounded-pill border" id="password-confirmed" name="password-confirmed" placeholder="Επιβαιβαίωση Κωδικού εισόδου">
                     
                     @error('password-confirmed')
                     <span class="text-danger">

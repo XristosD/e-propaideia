@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\profile;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -30,5 +31,36 @@ class Student extends Authenticatable
     public function supervisor()
     {
         return $this->belongsTo(Supervisor::class);
+    }
+
+    public function profile()
+    {
+        return $this->hasOne(profile::class);
+    }
+
+    public function progress()
+    {
+        return $this->hasOne(progress::class);
+    }
+
+    public function Results()
+    {
+        return $this->hasMany(Result::class);
+    }
+
+    public function initProfile()
+    {
+        $profile = new profile();
+        $this->profile()->save($profile);
+    }
+
+    public function initProgress()
+    {
+        if($this->progress){
+            return ;
+        }
+        $progress = new App\progress();
+        $this->progress()->save($progress);
+        $this->push();
     }
 }

@@ -13,40 +13,23 @@
   <body>
 
     <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="#">
         <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
         e-propaideia
       </a>
-      @auth('supervisor')
-      <div class="d-flex flex-row">
-        <div class="d-flex align-items-center mx-1">
-          <span class="font-weight-bolder">
-            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-              <form method="GET"  action="/supervisor/mainpanel" class="">
-                <button type="submit" class="btn btn-sm" style="background-color: #81e4e4;">{{ Auth::guard('supervisor')->user()->name }} </button>
-              </form>
-            
-              <div class="btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #81e4e4;">
-                </button>
-                <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="btnGroupDrop1">
-                  <form method="POST"  action="/supervisor/logout" class="px-2">
-                    @csrf
-                    <button type="submit" class="btn dropdown-item btn-sm ">Αποσύνδεση</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-            
-          </span>
-        </div>
-      </div>
-      @else
-      <span>
-        <a href="/supervisor/login">Σύνδεση</a>/<a href="/supervisor/register">Εγγαρφή</a>
-      </span>
-      @endauth
+      @if(isset($studentAtributes))
 
+      <div class="col-auto">
+        <a href="/student/logout">
+          <div class="btn">
+            <h3>
+              Σχόλασα
+            </h3>
+          </div>
+        </a>
+      </div>
+      
+      @endif
     </nav>
       
     @yield('content')

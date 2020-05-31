@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class StudentpanelController extends Controller
 {
-    public function __constract()
+    public function __construct()
     {
         $this->middleware('auth:supervisor');
     }
@@ -17,11 +17,19 @@ class StudentpanelController extends Controller
     public function index($student_id){
 
         $supervisor = Auth::guard('supervisor')->user();
-        if($supervisor->students->contains($student_id)){
+        if($supervisor->students->contains($student_id) ){
             $student = $supervisor->students->find($student_id);
-            return view('supervisor.studentpanel', [
-                'student' => $student,
-            ]);
+
+            if($student->activated){
+                return view('supervisor.studentpanel', [
+                    'student' => $student,
+                ]);
+            }
+            else{
+                abort(404);
+            }
+
+
         }
         else{
             abort(404);
