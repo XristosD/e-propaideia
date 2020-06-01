@@ -66,7 +66,7 @@
             <div class="carousel-item">
               <div class="d-flex justify-content-center">
                 <div class="col-md-8 mt-4 text-center align-middle">
-                  <h1 class="">Διαδραστικός τρόπος εκμάθησης<br> με παραδeιγμάτα </h1>
+                  <h1 class="">Διαδραστικός τρόπος εκμάθησης<br> με παραδείγματα </h1>
                 </div>  
               </div>                
             </div>     
