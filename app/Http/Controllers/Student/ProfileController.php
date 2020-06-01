@@ -16,7 +16,7 @@ class ProfileController extends Controller
     }
 
     public function index(){
-        if(!(Auth::guard('student')->user()->acttivated)){
+        if(!(Auth::guard('student')->user()->acttivated) && !Auth::guard('student')->user()->profile){
             Auth::guard('student')->user()->initProfile();
         }
         $pictures = $this->profilePictures();

@@ -59,8 +59,8 @@ class Student extends Authenticatable
         if($this->progress){
             return ;
         }
-        $progress = new App\progress();
+        $progress = new progress();
         $this->progress()->save($progress);
-        $this->push();
+        $this->save();
     }
 }
